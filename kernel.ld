@@ -2,9 +2,9 @@ ENTRY(boot)
 
 SECTIONS {
     . = 0x80200000;
-    __kernel_base = .
+    __kernel_base = .;
 
-    .text : {
+    .text :{
         KEEP(*(.text.boot));
         *(.text .text.*);
     }
@@ -23,7 +23,7 @@ SECTIONS {
         __bss_end = .;
     }
 
-    /* Stack *;
+    /* Stack */
     . = ALIGN(4);
     __stack_bottom = .;
     . += 128 * 1014;
