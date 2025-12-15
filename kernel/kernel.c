@@ -1,6 +1,6 @@
 #include "kernel.h"
 
-#define UART_BASE 
+#define UART0_BASE 0x10000000UL
 #define UART0_THR (*(volatile unsigned char *)(UART0_BASE + 0x00))
 #define UART0_LSR (*(volatile unsigned char *)(UART0_BASE + 0x05))
 
